@@ -1,0 +1,69 @@
+footer{
+
+    background:#1B357E;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px 40px;
+
+    margin-top:40px;
+
+}
+
+.footer-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.redesociais{
+
+    font-weight:bold;
+
+}
+
+#social ul{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:10px;
+
+    margin:0;
+
+    padding:0;
+
+}
+
+#social img{
+
+    width:30px;
+
+    height:30px;
+
+}
+
+.footer-logo img{
+
+    width:80px;
+
+}
+
+.copyright{
+
+    text-align:center;
+
+    flex:1;
+
+}

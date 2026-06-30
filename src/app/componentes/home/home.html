@@ -1,22 +1,16 @@
-    <main>
+<main>
 
-        <!-- CARROSSEL -->
-        <div id="carousel"></div>
+  <div id="carousel">
+    <img [src]="imagemAtual" alt="Veículo Ford">
+  </div>
 
-        <!-- TÍTULO -->
-        <div id="carousel-title"></div>
+  <div id="carousel-title">
+    <h2>{{ tituloAtual }}</h2>
+  </div>
 
-        <!-- BOTÕES -->
-        <div class="carousel-buttons">
+  <div class="carousel-buttons">
+    <button type="button" (click)="back()">◀</button>
+    <button type="button" (click)="next()">▶</button>
+  </div>
 
-            <button type="button" onclick="Carousel.Back()">
-                ◀
-            </button>
-
-            <button type="button" onclick="Carousel.Next()">
-                ▶
-            </button>
-
-        </div>
-
-    </main>
+</main>

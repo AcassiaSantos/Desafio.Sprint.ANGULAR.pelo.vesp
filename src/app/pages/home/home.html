@@ -1,1 +1,26 @@
-<p>home works!</p>
+  <main>
+
+  <!-- CARROSSEL -->
+  <div id="carousel">
+    <img [src]="imagemAtual" alt="Veículo Ford">
+  </div>
+
+  <!-- TÍTULO -->
+  <div id="carousel-title">
+    <h2>{{ tituloAtual }}</h2>
+  </div>
+
+  <!-- BOTÕES -->
+  <div class="carousel-buttons">
+
+    <button type="button" (click)="back()">
+      ◀
+    </button>
+
+    <button type="button" (click)="next()">
+      ▶
+    </button>
+
+  </div>
+
+</main>

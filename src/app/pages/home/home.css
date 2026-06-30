@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/* =======================
+   BASE
+======================= */
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #FFFFFF;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* =======================
+   HEADER
+======================= */
+
+header {
+    background: #FFFFFF;
+    border-bottom: 1px solid #ddd;
+
+    position: relative;
+
+    padding: 10px 20px;
+}
+
+/* logo */
+
+.logo {
+    width: 110px;
+}
+
+/* menu centralizado */
+
+header nav {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+header nav ul {
+    display: flex;
+    gap: 40px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+header nav a {
+    color: #1351d8;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    color: #1b357e;
+}
+
+/* =======================
+   MAIN
+======================= */
+
+main {
+    min-height: calc(100vh - 120px);
+    padding: 20px;
+}
+
+/* =======================
+   CARROSSEL
+======================= */
+
+#carousel {
+    width: 90%;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+#carousel img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    display: block;
+    border-radius: 5px;
+}
+
+/* texto alinhado */
+
+#carousel-title {
+    width: 100%;
+
+    text-align: center;
+
+    margin-top: 15px;
+
+    font-size: 14px;
+    color: #000;
+}
+
+#carousel-title a {
+    text-decoration: none;
+    color: #1351d8;
+    font-weight: bold;
+}
+
+#carousel-title a:hover {
+    text-decoration: underline;
+}
+
+/* =======================
+   SOCIAL
+======================= */
+
+nav#social ul {
+    display: flex;
+    gap: 10px;
+
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+}
+
+nav#social ul img {
+    width: 20px;
+    transition: 0.3s;
+}
+
+nav#social ul img:hover {
+    transform: scale(1.1);
+}
+
+/* =======================
+   FOOTER
+======================= */
+
+footer {
+    background: #1B357E;
+
+    height: 60px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    align-items: center;
+
+    padding: 0 25px;
+}
+
+/* esquerda */
+
+.footer-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* centro */
+
+.copyright {
+    text-align: center;
+
+    color: #fff;
+
+    font-size: 13px;
+    font-weight: 400;
+}
+
+/* direita */
+
+.footer-logo {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer-logo img {
+    width: 65px;
+}
+
+/* texto redes sociais */
+
+span.redesociais {
+    color: #fff;
+    font-size: 15px;
+}
+
+/* ícones */
+
+nav#social ul {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+nav#social ul img {
+    width: 20px;
+}
+
+/* =======================
+   BOTÕES
+======================= */
+
+button {
+    background: #1351d8;
+    color: #fff;
+
+    border: 0;
+    border-radius: 8px;
+
+    padding: 10px 25px;
+
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+button:hover {
+    background: #1b357e;
+}
+/* =======================
+   RESPONSIVO
+======================= */
+
+@media (max-width: 768px) {
+
+    header nav {
+        position: static;
+        transform: none;
+        margin-top: 10px;
+    }
+
+    header nav ul {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        gap: 10px;
+
+        height: auto;
+
+        padding: 15px;
+    }
+
+    iframe {
+        width: 100% !important;
+        height: 250px !important;
+    }
+
+    #carousel img {
+        height: auto;
+    }
+
+    #compare {
+        width: 95%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #compare table {
+        font-size: 12px;
+    }
+}
+/* =======================
+   BOTÕES CARROSSEL
+======================= */
+
+.carousel-buttons {
+
+    position: relative;
+}
+
+.carousel-buttons button {
+
+    position: absolute;
+
+    top: -250px;
+
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    z-index: 10;
+
+    margin: 0% -3%;
+
+    background-color: #1b357e;
+}
+
+/* botão esquerda */
+
+.carousel-buttons button:first-child {
+
+    left: 20px;
+}
+
+/* botão direita */
+
+.carousel-buttons button:last-child {
+
+    right: 20px;
+}

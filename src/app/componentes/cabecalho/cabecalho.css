@@ -1,0 +1,47 @@
+header {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+
+    padding: 20px 40px;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+}
+
+/* LOGO (lado esquerdo) */
+.logo-topo {
+    justify-self: start;
+}
+
+.logo {
+    width: 180px;
+    height: auto;
+    display: block;
+}
+
+/* MENU (centro perfeito) */
+nav {
+    justify-self: center;
+}
+
+nav ul {
+    display: flex;
+    gap: 50px;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* LINKS */
+nav a {
+    text-decoration: none;
+    color: #1351d8;
+    font-size: 22px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: #1B357E;
+}
