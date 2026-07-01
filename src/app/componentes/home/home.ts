@@ -4,48 +4,52 @@ import { Component } from '@angular/core';
   selector: 'app-home',
   standalone: true,
   templateUrl: './home.html',
-  styleUrl: './home.css'
+  styleUrls: ['./home.css']
 })
 export class Home {
 
-  imagens = [
+  imagens: string[] = [
     'http://localhost:3001/img/ranger.png',
     'http://localhost:3001/img/mustang.png',
     'http://localhost:3001/img/territory.png',
     'http://localhost:3001/img/broncoSport.png'
   ];
 
-  titulos = [
+  titulos: string[] = [
     'Ranger',
     'Mustang',
     'Territory',
     'Bronco Sport'
   ];
 
-  indice = 0;
+  indice: number = 0;
 
-  imagemAtual = this.imagens[0];
-  tituloAtual = this.titulos[0];
+  imagemAtual: string = this.imagens[0];
+  tituloAtual: string = this.titulos[0];
 
-  next() {
+  next(): void {
     this.indice++;
 
     if (this.indice >= this.imagens.length) {
       this.indice = 0;
     }
 
-    this.imagemAtual = this.imagens[this.indice];
-    this.tituloAtual = this.titulos[this.indice];
+    this.atualizar();
   }
 
-  back() {
+  back(): void {
     this.indice--;
 
     if (this.indice < 0) {
       this.indice = this.imagens.length - 1;
     }
 
+    this.atualizar();
+  }
+
+  private atualizar(): void {
     this.imagemAtual = this.imagens[this.indice];
     this.tituloAtual = this.titulos[this.indice];
   }
+
 }

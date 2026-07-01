@@ -1,209 +1,65 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
-
-/* =======================
-   BASE
-======================= */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+main {
+    max-width: 1200px;
+    margin: 40px auto;
 }
 
-body{
-    font-family:'Roboto',sans-serif;
-    background:#fff;
+#carousel {
+    width: 900px;
+    margin: 0 auto;
+    position: relative;
 }
 
-/* =======================
-   HEADER
-======================= */
-
-header{
-    max-width:1200px;
-    height:90px;
-    margin:auto;
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    padding:0 30px;
-
-    border-bottom:1px solid #ddd;
+#carousel img {
+    width: 100%;
+    display: block;
+    height: auto;
 }
 
-.logo{
-    width:140px;
+#carousel-title {
+    margin-top: 20px;
+    text-align: center;
 }
 
-header nav ul{
-    display:flex;
-    list-style:none;
-    gap:45px;
+#carousel-title h2 {
+    font-size: 42px;
+    font-weight: bold;
 }
 
-header nav a{
-    text-decoration:none;
-    color:#1351d8;
-    font-size:18px;
-    font-weight:bold;
+/* BOTÕES */
+
+#carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 60px;
+    height: 60px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #1351d8;
+    color: #fff;
+
+    font-size: 24px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-header nav a:hover{
-    color:#1b357e;
+#carousel button:hover {
+    background: #1b357e;
 }
 
-/* =======================
-   MAIN
-======================= */
+/* Botão esquerdo */
 
-main{
-    max-width:1200px;
-    margin:30px auto;
+.btn-esquerda {
+    left: -80px;
 }
 
-/* =======================
-   CARROSSEL
-======================= */
+/* Botão direito */
 
-#carousel{
-    width:900px;
-    margin:auto;
-}
-
-#carousel img{
-    width:100%;
-    height:450px;
-    object-fit:contain;
-}
-
-#carousel-title{
-    text-align:center;
-    margin-top:15px;
-    font-size:24px;
-    font-weight:bold;
-}
-
-/* =======================
-   BOTÕES
-======================= */
-
-.carousel-buttons{
-    width:900px;
-    margin:auto;
-    position:relative;
-}
-
-.carousel-buttons button{
-    position:absolute;
-    top:-250px;
-
-    width:55px;
-    height:55px;
-
-    border:none;
-    border-radius:50%;
-
-    background:#1351d8;
-    color:#fff;
-
-    font-size:22px;
-    cursor:pointer;
-}
-
-.carousel-buttons button:hover{
-    background:#1b357e;
-}
-
-.carousel-buttons button:first-child{
-    left:-25px;
-}
-
-.carousel-buttons button:last-child{
-    right:-25px;
-}
-
-/* =======================
-   FOOTER
-======================= */
-
-footer{
-    background:#1b357e;
-    margin-top:40px;
-    padding:20px 30px;
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.footer-right{
-    display:flex;
-    align-items:center;
-    gap:15px;
-}
-
-.redesociais{
-    color:#fff;
-    font-size:16px;
-    font-weight:bold;
-}
-
-#social ul{
-    display:flex;
-    list-style:none;
-    gap:12px;
-}
-
-#social img{
-    width:28px;
-    height:28px;
-}
-
-.copyright{
-    color:#fff;
-    font-size:14px;
-}
-
-.footer-logo img{
-    width:80px;
-}
-
-/* =======================
-   RESPONSIVO
-======================= */
-
-@media(max-width:768px){
-
-header{
-    flex-direction:column;
-    height:auto;
-    padding:20px;
-}
-
-header nav ul{
-    flex-direction:column;
-    gap:15px;
-    margin-top:15px;
-}
-
-#carousel,
-.carousel-buttons{
-    width:100%;
-}
-
-#carousel img{
-    height:auto;
-}
-
-.carousel-buttons button{
-    top:-45vw;
-}
-
-footer{
-    flex-direction:column;
-    gap:20px;
-    text-align:center;
-}
+.btn-direita {
+    right: -80px;
 }
